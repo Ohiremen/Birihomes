@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navigation design */
+nav {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    margin: 20px 70px;
+}
+
+.logo a #biri {
+    width: 20%;
+    height: auto;
+    cursor: none;
+}
+
+.menubar label, #menu {
+    display: none;
+}
+
+.menubar ul {
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.menubar ul li {
+    margin-left: 20px;
+    list-style: none;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: rgb(216, 176, 64);
+}
+
+.menubar ul li a:hover {
+    color: purple;
+    border-bottom: 2px solid rgb(216, 176, 64);
+    padding-bottom: 10px;
+    transition: .5s linear;
+}
+
+/* Top image */
+.top-container {
+    position: relative;
+    text-align: right;
+}
+
+.top-text {
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-10%, -50%);
+    font-size: 5em;
+    font-weight: bolder;
+    color: purple;
+    padding-right: 20px;
+    border-right: 10px solid purple;
+    animation: slide 5s linear;
+}
+
+@keyframes slide {
+    50% {
+        transform: translate3d(20, 0, 0);
+    }
+
+    60% {
+        transform: translate3d(-1692px, 0, 0);
+    }
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Project Section, About, Contact */
+#project,
+#interior,
+#about {
+    margin: 50px;
+}
+
+.project-text,
+.interior-text,
+.admin-text {
+    color: purple;
+    font-size: georgia;
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: serif;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid purple;
+}
+
+.admin-text .sub-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.6em;
+    padding: 0 100px;
+    font-weight: lighter;
+}
+
+.project-image,
+.interior-img,
+.admin-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 50px;
+}
+
+#prj,
+#int,
+#adm {
+    width: 90%;
+    height: auto;
+}
+
+.project-img-one p,
+.interior-img-one p,
+.admin-img-one p {
+    color: rgb(216, 176, 64);
+    font-weight: bolder;
+}
+
+/* Message */
+#message {
+    margin: 50px;
+    text-align: center;
+}
+
+.message-text p {
+    color: purple;
+    font-size: georgia;
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: serif;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid purple;
+}
+
+form label {
+    color: purple;
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+
+form input {
+    width: 50%;
+    padding: 10px;
+    outline-color: purple;
+    margin-bottom: 10px;
+}
+
+textarea {
+    outline-color: purple;
+    padding: 10px;
+}
+
+input[type=submit]:hover {
+    background: purple;
+    color: white;
+    border: 2px solid purple;
+}
+
+/* Contact Us */
+#contact {
+    margin: 50px;
+}
+.contact-us {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.contact-details {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 40px;
+    margin: 0 150px;
+    margin-top: 30px;
+}
+
+.contact-img {
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #ffd6d6, 
+                -1px -1px 5px #d1d1d1;
+    padding: 5px;
+}
+.contact-img img {
+    width: 30px;
+}
+
+.contact-text {
+    margin-top: 10px;
+}
+
+.contact-details .contact-text a {
+    text-decoration: none;
+    background-color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.contact-details .contact-text a:hover {
+    box-shadow: 1px 1px 5px #ceff48, 
+                -1px -1px 5px #ff4848;
+}
+
+#address {
+    width: 80%;
+    height: auto;
+    margin-left: 70px;
+    margin-top: 70px;
+}
+
+/* Screen width: 768px  */
+@media screen and (max-width: 768px) {
+
+    .logo {
+        margin: 10px 50px;
+    }
+
+    .menubar ul li a {
+        font-size: 0.9em;
+    }
+
+    /* Top Section  */
+    
+    .top-text {
+        transform: translate(-10%, -50%);
+        font-size: 3em;
+    }
+    
+    /* Project section  */
+    #project,
+    #interior,
+    #about {
+        margin: 30px;
+    }
+    
+    .project-text,
+    .interior-text {
+        font-size: 1.2em;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    #about .admin-text p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.9em;
+    }
+    
+    #about .admin-text .sub-text {
+        font-size: 0.5em;
+        font-family: sans-serif;
+        padding: 10px 20px;
+        line-height: 16.5px;
+    }
+
+    /* project section */
+    .project-image,
+    .interior-img,
+    .admin-img {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 60px;
+    }
+    
+    #prj,
+    #int,
+    #adm {
+        width: 90%;
+        height: auto;
+    }
+    
+    .project-img-one p,
+    .interior-img-one p {
+        color: rgb(216, 176, 64);
+        padding-bottom: 20px;
+    }
+    
+   #about .admin-img-one p {
+       font-size: 0.9em;
+       padding-bottom: 20px;
+   }
+
+    /* message section */
+    #message {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .message-text {
+        font-family: georgia;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input {
+        width: 50%;
+    }
+
+    textarea {
+        width: 50%;
+    }
+
+    /* contact section */
+
+    #contact {
+        margin: 20px;
+    }
+    .contact-us {
+        display: inline-block;
+    }
+    
+    #contact .contact-bar {
+        display: inline;
+    }
+    .contact-details {
+        display: inline-flex;
+        height: 40px;
+        margin: 30px 0;
+        margin-left: 60px;
+    }
+    
+    #address {
+        width: 90%;
+        margin: 20px 50px;
+    }
+}
+
+/* Screen width: 600px  */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        margin: 10px;
+        margin-bottom: 0;
+    }
+    .logo a #biri {
+        width: 40%;
+        height: auto;
+        cursor: none;
+        margin-top: 5px;
+    }
+    
+    .menubar label {
+        margin-top: 5px;
+        margin-right: 20px;
+        display: inline-block;
+        font-size: 1.5em;
+        border: 1px solid rgb(192, 192, 192);
+        padding: 5px 10px;
+        position: relative;
+        font-weight: bolder;
+    }
+
+    .menu {
+        display: inline-block;
+        background: purple;
+        position: absolute;
+        top: 100%;
+        right: 50px;
+        z-index: 1;
+        width: 0;
+        height: 160px;
+        transition: .5s linear;
+        overflow: hidden;
+    }
+
+    input[type=checkbox]:checked ~ .menu {
+        width: 100%;
+        right: 0;
+    }
+
+    .menubar {
+        margin-top: 5px;
+    }
+
+    .menubar .menu {
+        display: block;
+        margin-right: -10px;
+    }
+    
+    .menubar ul li {
+        margin-left: 20px;
+        list-style: none;
+    }
+    
+    .menubar ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 5px 10px;
+
+    }
+    .menubar ul li a:hover {
+        color: purple;
+        background: white;
+        border-bottom: none;
+    }
+
+    /* Top Section  */
+
+    .top-container {
+        position: relative;
+        text-align: right;
+    }
+    
+    .top-container img {
+        width: 80%;
+        height: auto;
+    }
+
+    .top-text {
+        transform: translate(-5%, -50%);
+        font-size: 2em;
+    }
+    
+    /* Project section  */
+    #project,
+    #interior,
+    #about {
+        margin: 20px;
+    }
+    
+    .project-text,
+    .interior-text {
+        font-size: 1em;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    #about .admin-text p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.8em;
+    }
+    
+    #about .admin-text .sub-text {
+        font-size: 0.5em;
+        font-family: sans-serif;
+        padding: 10px 20px;
+        line-height: 16.5px;
+    }
+
+    /* project section */
+    .project-image,
+    .interior-img,
+    .admin-img {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+    
+    #prj,
+    #int,
+    #adm {
+        width: 90%;
+        height: auto;
+    }
+    
+    .project-img-one p,
+    .interior-img-one p {
+        color: rgb(216, 176, 64);
+        padding-bottom: 20px;
+    }
+    
+   #about .admin-img-one p {
+       font-size: 0.9em;
+       padding-bottom: 20px;
+   }
+
+    /* message section */
+    #message {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .message-text {
+        font-family: georgia;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input {
+        width: 80%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    /* contact section */
+
+    #contact {
+        margin: 20px;
+    }
+    .contact-us {
+        display: inline-block;
+    }
+    
+    #contact .contact-bar {
+        display: inline;
+    }
+    .contact-details {
+        display: inline-flex;
+        height: 40px;
+        margin: 20px 0;
+        margin-left: 60px;
+    }
+    
+    #address {
+        width: 80%;
+        margin: 20px 50px;
+    }
+}
+
+/* Screen size - 320px */
+@media screen and ((max-width: 320px)) {
+    
+    nav {
+        margin: 10px;
+        margin-bottom: 0;
+    }
+    .logo a #biri {
+        width: 30%;
+        height: auto;
+        cursor: none;
+        margin-top: 5px;
+    }
+    
+    .menubar label {
+        margin-top: 5px;
+        margin-right: 20px;
+        display: inline-block;
+        font-size: 0.8em;
+        border: 1px solid rgb(192, 192, 192);
+        padding: 2px 5px;
+        position: relative;
+        font-weight: bolder;
+    }
+
+    .menu {
+        display: inline-block;
+        background: purple;
+        position: absolute;
+        top: 100%;
+        right: 50px;
+        z-index: 1;
+        width: 0;
+        height: 160px;
+        transition: .5s linear;
+        overflow: hidden;
+    }
+
+    input[type=checkbox]:checked ~ .menu {
+        width: 100%;
+        right: 0;
+    }
+
+    .menubar {
+        margin-top: 5px;
+    }
+
+    .menubar .menu {
+        display: block;
+        margin-right: -10px;
+    }
+    
+    .menubar ul li {
+        margin-left: 20px;
+        list-style: none;
+    }
+    
+    .menubar ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 5px 10px;
+
+    }
+    .menubar ul li a:hover {
+        color: purple;
+        background: white;
+        border-bottom: none;
+    }
+
+    /* Top Section  */
+
+    .top-container {
+        position: relative;
+        text-align: right;
+    }
+    
+    .top-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .top-text {
+        transform: translate(-5%, -50%);
+        font-size: 1em;
+        border-right: 2px solid purple;
+    }
+    
+    /* Project section  */
+    #project,
+    #interior,
+    #about {
+        margin: 20px;
+    }
+    
+    .project-text,
+    .interior-text {
+        font-size: 1em;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    #about .admin-text p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.8em;
+    }
+    
+    #about .admin-text .sub-text {
+        font-size: 0.5em;
+        font-family: sans-serif;
+        padding: 10px 20px;
+        line-height: 16.5px;
+    }
+
+    /* project section */
+    .project-image,
+    .interior-img,
+    .admin-img {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+    
+    #prj,
+    #int,
+    #adm {
+        width: 90%;
+        height: auto;
+    }
+    
+    .project-img-one p,
+    .interior-img-one p {
+        color: rgb(216, 176, 64);
+        padding-bottom: 20px;
+    }
+    
+   #about .admin-img-one p {
+       font-size: 0.9em;
+       padding-bottom: 20px;
+   }
+
+    /* message section */
+    #message {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .message-text {
+        font-family: georgia;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input {
+        width: 80%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    /* contact section */
+
+    #contact {
+        margin: 20px;
+    }
+    .contact-us {
+        display: inline-block;
+    }
+    
+    #contact .contact-bar {
+        display: inline;
+    }
+    .contact-details {
+        display: inline-flex;
+        height: 40px;
+        margin: 20px 0;
+        margin-left: 60px;
+    }
+    
+    #address {
+        width: 80%;
+        margin: 20px 50px;
+    }
+}
